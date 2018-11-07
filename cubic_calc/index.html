@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cubic Calculater by prof GHOST</title>
+	
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/manifest.json">
+
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-starturl" content="https://profghost.github.io">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+<meta name="msapplication-TileColor" content="#3050dd">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#3050dd">
+<!--===============================================================================================
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================--
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	
+</head>
+<body onload="addbill()">
+	
+ <script type="text/javascript">
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      //alert(err)
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}    
+
+</script>
+	<div class="bg-container-contact100" style="background-image: url(images/n.jpg);">
+		<div class="contact100-header flex-sb-m">
+			<a href="#" class="contact100-header-logo">
+<B>
+<font opacity="1" >
+   PROF GHOST
+</font>
+</>
+				<img src="images/icons/logo.png" alt="LOGO">
+			</a>
+
+			<div>
+<!--
+				<button class="btn-show-contact100">
+					Contact Us
+				</button>
+-->
+			</div>
+		</div>
+	</div>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+
+			<div class="contact100-form-title" style="background-image: url(images/bg-03.jpg);">
+				<span>prof. GHOST👻 ® </span>
+			</div>
+
+			<form method="get" onSubmit="return false " class="contact100-form validate-form">
+				<div><font size="10px" color="#307099"><p> කියුබික් මැනීම </p><br></font></div>
+				<div><font size="4px" color="#003070"><p id=result></p><br></font></div>
+
+				<div class="wrap-input100 validate-input">
+					<input id="dikadi" class="input100" type="number" name="දික් අඩි" placeholder="දික් අඩි ප්‍රමාණය ">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="phone">
+						<span class="lnr lnr-book m-b-2"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input100 validate-input">
+					<input id="wataadi" class="input100" type="number" name="වට අඩි " placeholder="වට අගල් ප්‍රමාණය "></input>
+					<span class="focus-input100"></span>
+					<label class="label-input100 rs1" for="message">
+						<span class="lnr lnr-moon"></span>
+					</label>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" type="button" onClick="calculate ()">
+						 හරි
+					</button>
+					<button  class="contact100-form-btn" style="display: none" type="submit" onClick="calculate ()">
+						 හරි
+					</button>
+				</div>
+			</form>
+		</div>
+		
+		
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			
+			<table id="bill" class="darkTable">
+<thead>
+<tr>
+<th>No.</th>
+<th>දික් අඩි</th>
+<th>වට ප්‍රමානය අගල්</th>
+<th>කියුබික් අඩි ප්‍රමානය</th>
+</tr>
+
+</thead>
+<tbody id="bully">
+
+</tbody>
+</table><div><span>
+			<button class="contact100-form-btn" type="button" style="margin-top: 4px;"  id="clast" onClick="clearlast ()">
+						 Clear last
+					</button></span><span><button class="contact100-form-btn" type="button" style="margin-top: 4px;display: hidden;" id="edit_input_btn_main" onClick="edit_more_click ()">
+						 Edit data
+					</button></span></div>
+		<div id="edit_container" style="display: none">	
+		<div class="wrap-input100 validate-input">
+					<input id="edit_input_txt_id" class="input100" type="number" name="ID" placeholder="Enter the Id of the item ">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="phone">
+						<span class="lnr lnr-database m-b-2"></span>
+					</label>
+				</div>
+						<div class="wrap-input100 validate-input">
+					<input id="edit_input_txt_dikadi" class="input100" type="number" name="දික් අඩි" placeholder="දික් අඩි ප්‍රමාණය ">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="phone">
+						<span class="lnr lnr-book m-b-2"></span>
+					</label>
+				</div>
+
+
+
+				<div class="wrap-input100 validate-input">
+					<input id="edit_input_txt_watadi" class="input100" type="number" name="වට අඩි " placeholder="වට අගල් ප්‍රමාණය "></input>
+					<span class="focus-input100"></span>
+					<label class="label-input100 rs1" for="message">
+						<span class="lnr lnr-moon"></span>
+					</label>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<span><button id="edit_input_btn_confirm" class="contact100-form-btn" type="button" onClick="edit_data ()">
+						 Confirm
+					</button></span>
+					<span><button class="contact100-form-btn" id="edit_input_btn_cancel" type="button" onClick="edit_cancel ()">
+						 Cancel
+					</button></span>
+					
+						</div></div>	<div>
+<br><font size="4px" color="#404010"><p id="tot">මුලු කියුබික් ප්‍රමානය  : 0</p></font></div>
+    
+    
+    </div></div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<!--<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+ <!-- <script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script> -->
+</body>
+</html>
